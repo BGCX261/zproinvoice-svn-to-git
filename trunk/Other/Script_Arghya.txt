@@ -1,0 +1,28 @@
+delete from shortcuts
+where module_name like 'invoices'
+
+insert into shortcuts values (newid(),0,NULL,getdate(),'00000000-0000-0000-0000-000000000000',getdate(),'Invoices','Invoices.LNK_INVOICE_LIST','~/crm/Invoice Management/Invoices/index.aspx','Invoices.gif',1,1,'Invoices','list')
+insert into shortcuts values (newid(),0,NULL,getdate(),'00000000-0000-0000-0000-000000000000',getdate(),'Invoices','Invoices.LNK_NEW_INVOICE','~/crm/Invoice Management/Invoices/Edit.aspx','CreateInvoices.gif',1,2,'Invoices','list')
+insert into shortcuts values (newid(),0,NULL,getdate(),'00000000-0000-0000-0000-000000000000',getdate(),'Invoices','Payments.LNK_PAYMENT_LIST','~/crm/Invoice Management/Payments/index.aspx','Payments.gif',1,3,'Invoices','list')
+insert into shortcuts values (newid(),0,NULL,getdate(),'00000000-0000-0000-0000-000000000000',getdate(),'Invoices','Payments.LNK_NEW_PAYMENT','~/crm/Invoice Management/Payments/Edit.aspx','CreatePayments.gif',1,4,'Invoices','list')
+insert into shortcuts values (newid(),0,NULL,getdate(),'00000000-0000-0000-0000-000000000000',getdate(),'Invoices','Manufacturers.LNK_MANUFACTURER_LIST','~/crm/Invoice Management/Manufacturers/index.aspx','Manufacturers.gif',1,5,'Invoices','list')
+insert into shortcuts values (newid(),0,NULL,getdate(),'00000000-0000-0000-0000-000000000000',getdate(),'Invoices','New Manufacturer','~/crm/Invoice Management/Manufacturers/Edit.aspx','Manufacturers.gif',1,6,'Invoices','list')
+insert into shortcuts values (newid(),0,NULL,getdate(),'00000000-0000-0000-0000-000000000000',getdate(),'Invoices','ProductTemplates.LNK_PRODUCT_TEMPLATE_LIST','~/crm/Invoice Management/ProductTemplates/index.aspx','ProductTemplates.gif',1,7,'Invoices','list')
+insert into shortcuts values (newid(),0,NULL,getdate(),'00000000-0000-0000-0000-000000000000',getdate(),'Invoices','ProductTemplates.LNK_NEW_PRODUCT_TEMPLATE','~/crm/Invoice Management/ProductTemplates/Edit.aspx','ProductTemplates.gif',1,8,'Invoices','list')
+insert into shortcuts values (newid(),0,NULL,getdate(),'00000000-0000-0000-0000-000000000000',getdate(),'Invoices','ProductTypes.LNK_PRODUCT_TYPE_LIST','~/CRM/Invoice Management/ProductTypes/index.aspx','ProductTypes.gif',1,9,'Invoices','list')
+insert into shortcuts values (newid(),0,NULL,getdate(),'00000000-0000-0000-0000-000000000000',getdate(),'Invoices','New Product Type','~/CRM/Invoice Management/ProductTypes/Edit.aspx','ProductTypes.gif',1,10,'Invoices','list')
+insert into shortcuts values (newid(),0,NULL,getdate(),'00000000-0000-0000-0000-000000000000',getdate(),'Invoices','ProductCategories.LNK_PRODUCT_CATEGORIES_LIST','~/crm/Invoice Management/ProductCategories/index.aspx','ProductCategories.gif',1,11,'Invoices','list')
+insert into shortcuts values (newid(),0,NULL,getdate(),'00000000-0000-0000-0000-000000000000',getdate(),'Invoices','New Product Category','~/crm/Invoice Management/ProductCategories/Edit.aspx','ProductCategories.gif',1,12,'Invoices','list')
+insert into shortcuts values (newid(),0,NULL,getdate(),'00000000-0000-0000-0000-000000000000',getdate(),'Invoices','Products.LNK_PRODUCT_LIST','~/crm/Invoice Management/Products/index.aspx','Products.gif',1,13,'Invoices','list')
+insert into shortcuts values (newid(),0,NULL,getdate(),'00000000-0000-0000-0000-000000000000',getdate(),'Invoices','Products.LNK_NEW_PRODUCT','~/crm/Invoice Management/Products/Edit.aspx','CreateProducts.gif',1,14,'Invoices','list')
+
+
+
+select * from shortcuts
+where module_name like 'invoices'
+order by SHORTCUT_ORDER
+
+update Modules 
+set RELATIVE_PATH = '~/CRM/Invoice Management/Invoices/index.aspx'
+where MODULE_NAME = 'Invoices'
+select * from Modules where MODULE_NAME = 'Invoices'

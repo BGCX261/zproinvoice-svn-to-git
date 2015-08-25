@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MODULE NAME="product_status_dom">
+  <TERM NAME="Orders" ORDER="2" DISPLAY_NAME="Ordered" />
+  <TERM NAME="Quotes" ORDER="1" DISPLAY_NAME="Quoted" />
+  <TERM NAME="Ship" ORDER="3" DISPLAY_NAME="Shipped" />
+  <TERM NAME="Available" ORDER="4" DISPLAY_NAME="Available" />
+</MODULE>
